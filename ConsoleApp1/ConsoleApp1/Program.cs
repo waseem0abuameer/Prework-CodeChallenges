@@ -6,8 +6,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Scored number: " + ArrayMaxResult());
+
+            // Console.WriteLine("Scored number: " + ArrayMaxResult());
+            Console.WriteLine("Enter Year");
+            int Year = Convert.ToInt32(Console.ReadLine());
+
+            if (IsLeapYear(Year) == true)
+                Console.WriteLine("Is Leap Year");
+            else
+                Console.WriteLine("Isnt Leap Year");
 
         }
         static  int ArrayMaxResult()
@@ -37,6 +44,17 @@ namespace ConsoleApp1
             }
 
             return numrep * num;
+        }
+        static bool IsLeapYear(int year)
+        {
+            if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
+                return true;
+            else if (year % 4 == 0 && year % 100 == 0)
+                return false;
+            else if (year % 4 == 0)
+                return true;
+            else
+                return false;
         }
     }
 }
