@@ -6,3 +6,6 @@
 ![imgae](IsLeapYear.png)
 ## Perfect Sequence
 ![imgae](PerfectSequence.png)
+## Sum Of Rows
+![imgae](SumOfRows.png)
+
