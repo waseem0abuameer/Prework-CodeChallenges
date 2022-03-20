@@ -8,13 +8,16 @@ namespace ConsoleApp1
         {
 
             // Console.WriteLine("Scored number: " + ArrayMaxResult());
-            Console.WriteLine("Enter Year");
-            int Year = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter Year");
+            //int Year = Convert.ToInt32(Console.ReadLine());
 
-            if (IsLeapYear(Year) == true)
-                Console.WriteLine("Is Leap Year");
-            else
-                Console.WriteLine("Isnt Leap Year");
+            //if (IsLeapYear(Year) == true)
+            //    Console.WriteLine("Is Leap Year");
+            //else
+            //    Console.WriteLine("Isnt Leap Year");
+            int[] arr = { 1, 3, 2 };
+            Console.WriteLine(PerfectSequence(arr)); 
+           
 
         }
         static  int ArrayMaxResult()
@@ -55,6 +58,24 @@ namespace ConsoleApp1
                 return true;
             else
                 return false;
+        }
+        static string PerfectSequence(int[] arr)
+        {
+            int sum = 0;
+            int multiply = 1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                
+
+                sum += arr[i];
+                multiply *= arr[i];
+            }
+
+            if (sum == multiply)
+                return "YES";
+            else
+            return "NO";
         }
     }
 }
