@@ -15,9 +15,14 @@ namespace ConsoleApp1
             //    Console.WriteLine("Is Leap Year");
             //else
             //    Console.WriteLine("Isnt Leap Year");
-            int[] arr = { 1, 3, 2 };
-            Console.WriteLine(PerfectSequence(arr)); 
+            //int[] arr = { 1, 3, 2 };
+            //Console.WriteLine(PerfectSequence(arr)); 
+            int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+            int[] myArray2 = SumOfRows(myArray);
+            for (int i = 0; i < myArray2.Length; i++)
+                Console.WriteLine(myArray2[i]);
            
+
 
         }
         static  int ArrayMaxResult()
@@ -76,6 +81,20 @@ namespace ConsoleApp1
                 return "YES";
             else
             return "NO";
+        }
+        static int[] SumOfRows(int[,] myArray)
+        {
+            int[] result = new int[myArray.GetLength(0)];
+
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    result[i] += myArray[i, j];
+                }
+            }
+
+            return result;
         }
     }
 }
